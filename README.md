@@ -12,11 +12,11 @@ milliseconds, and every visual detail can be customized.
 use graph::prelude::*;
 
 LineChart::new()
-    .title("월별 매출")
-    .x_label("월")
-    .y_label("금액")
-    .series("매출", &months, &sales)
-    .series_with("비용", &months, &costs, |s| s.dash([6.0, 4.0]))
+    .title("Monthly Sales")
+    .x_label("Month")
+    .y_label("Amount")
+    .series("Sales", &months, &sales)
+    .series_with("Costs", &months, &costs, |s| s.dash([6.0, 4.0]))
     .save_svg("sales.svg")?;
 ```
 
@@ -24,7 +24,7 @@ LineChart::new()
 
 | | |
 |---|---|
-| **Korean text** | Korean-first font stack, full-width text measurement, y-axis label never rotated, Korean number units (`1.2만`, `3억`), Excel CSV BOM handled. |
+| **Korean text** | Korean-first font stack, full-width text measurement, y-axis label never rotated, Korean number units (e.g. `12,000` → 1.2 *man*, `300,000,000` → 3 *eok*), Excel CSV BOM handled. |
 | **Quadrants** | Show selected quadrants, put the origin anywhere, or fix ranges. Axes can cross at the origin like in math textbooks. |
 | **Space-aware text** | Presets (`Full`, `Compact`, `Minimal`) plus per-element toggles. Hidden text gives its space back to the plot. |
 | **Bare mode** | Data only: no text, axes or padding. Add the grid back with one call. |
@@ -83,7 +83,7 @@ chart.theme(Theme::cyberpunk())
      .palette([Color::hex("#00f0ff"), Color::hex("#ff2a6d")])
      .theme_with(|t| t.series.width = 3.0)               // any theme field
      .x_axis(|a| a.line_color(Color::hex("#00f0ff")))    // per axis
-     .series_style("비용", |s| s.dash([4.0, 4.0]).glow(false))  // per series
+     .series_style("Costs", |s| s.dash([4.0, 4.0]).glow(false))  // per series
 ```
 
 ## CLI
@@ -92,7 +92,7 @@ A thin command line tool is included for quick testing. Its default skin is
 `cyberpunk`.
 
 ```sh
-cargo run -p graph-cli -- line assets/data/sample_ko.csv --title "월별 실적"
+cargo run -p graph-cli -- line assets/data/sample_ko.csv --title "Monthly Results"
 cargo run -p graph-cli -- line assets/data/wave.csv --origin 0.5,0.5 --legend direct
 cargo run -p graph-cli -- line data.csv --quadrant 1 --preset compact --hide legend
 cargo run -p graph-cli -- line data.csv --bare --grid --width 1600 --height 400
