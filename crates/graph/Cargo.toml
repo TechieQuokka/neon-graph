@@ -1,0 +1,20 @@
+[package]
+name = "graph"
+description = "Simple, fast and good-looking charts with first-class Korean text support."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = ["svg"]
+svg = ["dep:graph-svg"]
+serde = ["graph-core/serde"]
+
+[dependencies]
+graph-core.workspace = true
+graph-svg = { workspace = true, optional = true }
+
+[lints]
+workspace = true

@@ -1,0 +1,24 @@
+[package]
+name = "graph-cli"
+description = "Thin command line tool for testing the graph library (CSV -> SVG)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "graph"
+path = "src/main.rs"
+# The library crate is also called `graph`; skip docs to avoid a filename collision.
+doc = false
+
+[dependencies]
+graph = { workspace = true, features = ["svg", "serde"] }
+clap.workspace = true
+csv.workspace = true
+serde.workspace = true
+toml.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,25 @@
+# Example theme file. Only the keys you want to change are needed;
+# everything else comes from the theme named in `extends`.
+# Run `graph theme cyberpunk` to see every available key.
+extends = "cyberpunk"
+
+background = "#05070d"
+plot_background = "#0a0f1c"
+
+[title]
+family = "Pretendard, 'Noto Sans KR', sans-serif"
+size = 22.0
+weight = 800
+color = "#f0f6ff"
+
+[series]
+palette = ["#00f0ff", "#ff2a6d", "#f9f871", "#05ffa1"]
+width = 2.5
+markers = false
+marker_radius = 3.0
+opacity = 1.0
+
+[glow]
+enabled = true
+radius = 4.0
+intensity = 0.9
