@@ -2,7 +2,7 @@
 
 **Fast, clean SVG charts in Rust, with first-class Korean text support.**
 
-![Monthly results, cyberpunk theme](docs/images/hero.png)
+![Monthly results, cyberpunk theme](docs/images/hero.png?v=2)
 
 `graph` is a small charting library built for readable charts and for
 experimenting. Korean (Hangul) labels just work, millions of points render in
@@ -36,9 +36,9 @@ LineChart::new()
 
 | Origin axes + direct labels | Light theme |
 |---|---|
-| ![Waves with axes through the origin](docs/images/origin.png) | ![Light theme line chart](docs/images/light.png) |
+| ![Waves with axes through the origin](docs/images/origin.png?v=2) | ![Light theme line chart](docs/images/light.png?v=2) |
 | **First quadrant only** | **Origin at 25 % / 25 %** |
-| ![First quadrant](docs/images/quadrants_q1.png) | ![Weighted quadrants](docs/images/quadrants_weighted.png) |
+| ![First quadrant](docs/images/quadrants_q1.png?v=2) | ![Weighted quadrants](docs/images/quadrants_weighted.png?v=2) |
 
 **Bare mode with grid** (`--bare --grid`)
 
